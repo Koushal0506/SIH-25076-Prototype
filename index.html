@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi Sakha - AI-Based Farmer Support System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-top">
+           <div class="logo-container">
+                <div class="logo"><!-- 
+                    <div class="logo-saffron"></div>
+                    <div class="logo-white">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="logo-green"></div> -->
+                    <img src="Images/1000206000-removebg-preview.png" alt="krishi Sakha" src="index.html"">
+                </div>  
+                <h1 class="website-name">Krishi Sakha</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="advisory.html">Advisory</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="schemes.html">Schemes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-tagline">
+            <p>An AI-Powered Initiative by Government of India for Farmer Welfare</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Empowering Farmers with AI Technology</h2>
+            <p>Get expert advice, sell your produce directly, and access government schemes - all in your local language</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" id="voice-support-btn" >Get Voice Support</button>
+                <button class="btn-secondary" id="marketplace-btn" src="marketplace.html">Visit Marketplace</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Images/Happy-Farmer.png" alt="Happy Farmer" >
+        </div>
+    </section>
+    
+        <!-- ... existing code ... -->
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbot-widget">
+        <div class="chatbot-header">
+            <h3>Krishi Sakha AI Assistant</h3>
+            <button class="chatbot-close" id="chatbot-close">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>नमस्ते! I'm your Krishi Sakha AI assistant. How can I help you today?</p>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="bn">Bengali</option>
+                <option value="mr">Marathi</option>
+            </select>
+            <input type="text" id="chatbot-input" placeholder="Ask a question...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" id="chatbot-toggle">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <!-- Voice Support Section -->
+    <section id="voice-support" class="voice-support">
+        <h2>AI Call-Back Advisor (Kisan Ki Awaaz)</h2>
+        <div class="voice-container">
+            <div class="voice-info">
+                <p>Give a missed call to <span class="highlight">+91-XXXX-XXXX-XX</span> and our AI system will call you back in your local language</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>24×7 Support</h3>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-language"></i>
+                        <h3>Local Dialect</h3>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-history"></i>
+                        <h3>Remembers History</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="voice-demo">
+                <div class="call-demo">
+                    <p>Try our voice demo</p>
+                    <button class="btn-call" id="call-demo-btn">
+                        <i class="fas fa-phone"></i> Click to Call
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Voice Call Modal -->
+    <div id="voice-modal" class="modal voice-modal">
+        <div class="modal-content">
+            <div class="call-container">
+                <div class="call-header">
+                    <h3>Krishi Sakha AI Advisor</h3>
+                    <p>Connecting you to our AI system</p>
+                </div>
+                <div class="call-status">
+                    <div class="calling-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p id="call-status-text">Connecting...</p>
+                </div>
+                <div class="call-options">
+                    <h4>What do you need help with?</h4>
+                    <div class="option-buttons">
+                        <button class="option-btn" data-option="pest">Pest Control</button>
+                        <button class="option-btn" data-option="weather">Weather</button>
+                        <button class="option-btn" data-option="crop">Crop Advice</button>
+                        <button class="option-btn" data-option="market">Market Prices</button>
+                    </div>
+                </div>
+                <div class="call-controls">
+                    <button class="btn-end-call" id="end-call">End Call</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Krishi Sakha</h3>
+                <p>An initiative under the Ministry of Agriculture & Farmers' Welfare</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisory.html">Advisory Hub</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="schemes.html">Government Schemes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Toll Free: 87704-15156</p>
+                <p>Email: support@krishisakha.gov.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Krishi Sakha | Government of India</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
